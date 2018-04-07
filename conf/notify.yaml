@@ -6,7 +6,7 @@
 # 2. modify the default value to the provider that you want
 
 email:
-    default: hasura
+  default: hasura
   providers:
     hasura:
       authToken:
@@ -19,7 +19,7 @@ email:
           key: notify.mandrill.key
           name: hasura-secrets
     smtp:
-      hostname: "smtp.mail.yahoo.com"
+      hostname: "smtp.gmail.com"
       password:
         secretKeyRef:
           key: notify.smtp.password
