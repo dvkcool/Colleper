@@ -1,0 +1,154 @@
+body{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+header{
+  overflow: hidden;
+}
+#mainIcon,#logo{
+  float: left;
+  display: inline-block;
+}
+#mainIcon{
+  margin-top: 20px;
+  padding-right: 10px;
+}
+#logo{
+  margin: 10px;
+  padding-left: 10px;
+}
+
+#headerButton{
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  background-color: #68efad;
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  transform: translate(-50%,-50%);
+  padding: 10px 60px;
+  font-size: 18px;
+  font-family:arial;
+  border-radius: 60px;
+  box-shadow: 2px 7px 0px 0px blue;
+  transition: all .2s;
+}
+#headerButton:active{
+  top:6%;
+  box-shadow: 0px 0px 0px 0px blue;
+}
+.index hr{
+  margin-top:  30px;
+}
+#main{
+  height: 50px;
+  width: 50px;
+  background-color: #69b4f8;
+  border-radius: 50%;
+  position: fixed;
+  top: 95%;
+  left: 3%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+}
+#main:hover{
+  cursor: pointer;
+}
+#icon{
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#menu{
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 12%;
+  left: 58%;
+  transform: translate(-50%,-50%);
+}
+#menu ul{
+  height: 300px;
+  width: 220px;
+  text-align: center;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  opacity: 0;
+  visibility: hidden;
+
+}
+#menu ul li{
+  font-family: fantasy;
+  color: white;
+  font-size: 27px;
+  padding: 10px;
+
+}
+#menu ul li:hover{
+  cursor: pointer;
+}
+
+#menu ul li:hover::before{
+content: '';
+width: 15px;
+height:4px;
+background-color: white;
+position: absolute;
+margin-top: 18px;
+margin-left: -20px;
+}
+#menu ul li:hover::after{
+content: '';
+width: 15px;
+height:4px;
+background-color: white;
+position: absolute;
+margin-top: 18px;
+margin-left: 5px;
+}
+#bg{
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+.content{
+  float: left;
+  background-color: #e3e3e3;
+  height: 650px;
+  width: 74%;
+  overflow: hidden;
+}
+.leftSidebar{
+  float: right;
+  width: 25%;
+  height: 500px;
+
+  background-color: mediumpurple;
+  text-align: center;
+  font-family: sans-serif;
+}
+.events{
+  list-style: none;
+  text-align: justify;
+  line-height: 20px;
+}
+
+#images{
+  width: 1000px;
+  height: 400px;
+  margin-left: 6%;
+  margin-top: 13%;
+  background-color: red;
+}
