@@ -35,6 +35,11 @@ app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
 */
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(express.static(__dirname + '/public'));
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
+});
