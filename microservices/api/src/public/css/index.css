@@ -14,18 +14,24 @@ header{
 }
 #mainIcon{
   margin-top: 0px;
-  padding-right: 10px;
+  padding-left: 1px;
+  padding-right: 20px;
+  width: 120px;
+  height: 90px;
 }
 #logo{
-  margin: 30px;
-  padding-left: 10px;
+  margin: 0px;
+  padding-top: 10px;
+  padding-left: 30px;
+  font-size: 40px;
+  font-family: 'Abril Fatface' , cursive;
 }
 
 #headerButton{
   float: right;
   text-decoration: none;
   color: #fff;
-  background-color: #68efad;
+  background-color: #56D9D5;
   position: absolute;
   top: 7.5%;
   right: 0%;
@@ -34,15 +40,15 @@ header{
   font-size: 18px;
   font-family:arial;
   border-radius: 60px;
-  box-shadow: 2px 7px 0px 0px blue;
+  box-shadow: 2px 7px 0px 0px #68efad;
   transition: all .2s;
 }
 #headerButton:active{
   top:8.5%;
-  box-shadow: 0px 0px 0px 0px blue;
+  box-shadow: 0px 0px 0px 0px #68efad;
 }
 .index hr{
-  margin-top:  10px;
+  margin-top:  0px;
   overflow: hidden;
 }
 #main{
@@ -127,8 +133,6 @@ margin-left: 5px;
 }
 .content{
   float: left;
-  background-color: #e3e3e3;
-  height: 650px;
   width: 75%;
   overflow: hidden;
 }
@@ -137,7 +141,6 @@ margin-left: 5px;
   width: 25%;
   height: 500px;
 
-  background-color: mediumpurple;
   text-align: center;
   font-family: sans-serif;
 }
@@ -161,8 +164,13 @@ margin-left: 5px;
   width: 0px;
 }
 .mySlides {
+  height: 400px;
   width: 100%;
 }
 .w3-content{
   max-width: 500px;
+}
+
+a{
+  target:_blank;
 }

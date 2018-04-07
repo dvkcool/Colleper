@@ -1,94 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>HOME</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script
-    src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="jquery/menu.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+	<link rel="stylesheet" href="css/index.css">
+	<style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Do+Hyeon|Jua|Lobster');
+</style>
+	<script
+	src="jquery/jquery-3.3.1.min.js"></script>
+	<script src="jquery/menu.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  </head>
-  <body>
-    <header>
-      <img src="image/colleper.png" alt="icon" id="mainIcon" />
-      <h1 id="logo">COLLEPER = COLLEGE+KEEPER</h1>
-      <a href="#" class="button" id="headerButton">LOGIN</a>
-    </header>
-    <div class="index">
-      <hr>
+</head>
+<body>
+	<header>
+		<img src="image/colleper.png" alt="icon" id="mainIcon" />
+		<h1 id="logo">COLLEPER = COLLEGE+KEEPER</h1>
+		<a href="#" class="button" id="headerButton">LOGIN</a>
+	</header>
+	<div class="index">
+		<hr>
 
-        <div class="content">
-          <div class="w3-content w3-section" >
-  <img class="mySlides w3-animate-fading" src="image/lost&found.jpeg" >
+		<div class="content">
+			<div class="w3-content w3-section" >
+				<a href="notes.html"> <img class="mySlides w3-animate-fading" src="image/notes.jpg" ></a>
+				<a href=""><img class="mySlides w3-animate-fading" src="image/vehicle.jpg" ></a>
+				<a href=""><img class="mySlides w3-animate-fading" src="image/technoshop.jpg"></a>
+				<a href=""><img class="mySlides w3-animate-fading" src="image/lost&found.jpeg" ></a>
+			</div>
 
- 					 <img class="mySlides w3-animate-fading" src="image/notes.jpg" >
-  <img class="mySlides w3-animate-fading" src="image/vehicle.jpg" >
-  <img class="mySlides w3-animate-fading" src="image/technoshop.jpg">
-</div>
+
+		</div>
+		<aside class="leftSidebar">
+			<h3>UPCOMING EVENTS</h3>
+			<hr />
+			<div id="ecran" >
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				utkarshan <br><br>
+				eclecktika<br><br>
+				aavartan<br><br>
+				mock placement<br><br>
+
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			</div>
+
+		</aside>
+		<div id="bg">
+		</div>
+		<div id="main">
+			<img src="image/menu.png" id="icon" />
+			<div id="menu">
+				<ul>
+					<li>HOME</li>
+					<li>NOTES</li>
+					<li>LOST & FOUND</li>
+					<li>LEND/GET VEHICLE</li>
+					<li>TECHNOSHOP</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'>
+		function ScrollDiv(){
+
+			if(document.getElementById('ecran').scrollTop<(document.getElementById('ecran').scrollHeight-document.getElementById('ecran').offsetHeight)){-1
+				document.getElementById('ecran').scrollTop=document.getElementById('ecran').scrollTop+1
+			}
+			else {document.getElementById('ecran').scrollTop=0;}
+		}
+
+		setInterval(ScrollDiv,50)
+	</script>
+
+	<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 9000);    
+		}
+	</script>
 
 
-        </div>
-        <aside class="leftSidebar">
-          <h3>UPCOMING EVENTS</h3>
-          <hr />
-          <div id="ecran" >
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            utkarshan <br><br>
-            eclecktika<br><br>
-            aavartan<br><br>
-            mock placement<br><br>
-
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          </div>
-
-        </aside>
-      <div id="bg">
-      </div>
-      <div id="main">
-        <img src="image/menu.png" id="icon" />
-        <div id="menu">
-          <ul>
-            <li>HOME</li>
-            <li>NOTES</li>
-            <li>LOST & FOUND</li>
-            <li>LEND/GET VEHICLE</li>
-            <li>TECHNOSHOP</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  <script type='text/javascript'>
-  function ScrollDiv(){
-
-   if(document.getElementById('ecran').scrollTop<(document.getElementById('ecran').scrollHeight-document.getElementById('ecran').offsetHeight)){-1
-         document.getElementById('ecran').scrollTop=document.getElementById('ecran').scrollTop+1
-         }
-   else {document.getElementById('ecran').scrollTop=0;}
-}
-
-setInterval(ScrollDiv,50)
-</script>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 9000);    
-}
-</script>
-
-  
-  </body>
+</body>
 
 </html>
