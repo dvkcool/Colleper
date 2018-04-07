@@ -72,7 +72,6 @@ app.post('/eventadd', function(req, res){
         });
     }
     console.log("response: "+ response);
-    res.send(JSON.stringify(response));
   })
 });
 app.listen(8080, function () {
