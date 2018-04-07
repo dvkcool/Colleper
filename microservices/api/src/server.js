@@ -73,7 +73,9 @@ app.post('/eventadd', function(req, res){
         });
     }
     console.log("response: "+ response);
-    res.send(response);
+    res.status(200).json({
+      'message': 'Select request done'
+    });
   })
 });
 app.listen(8080, function () {
