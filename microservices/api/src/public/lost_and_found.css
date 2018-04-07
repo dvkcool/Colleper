@@ -2,7 +2,20 @@
 
 text-align: center;
 text-decoration: underline;
+}
 
+#img1{
+	height: 300px;
+	width: 300px;
+	
+}
 
+#img2{
+	height: 300px;
+	width: 300px;
+}
 
+#over2{
+	background-color: #dedef8;
+	box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
 }
