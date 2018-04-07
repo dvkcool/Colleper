@@ -55,8 +55,8 @@ app.post('/eventadd', function(req, res){
           "table": "events",
           "objects": [
               {
-                  "eventname": req.eventname,
-                  "eventdate": req.eventdate
+                  "eventname": req.body.eventname,
+                  "eventdate": req.body.eventdate
               }
           ]
       }
