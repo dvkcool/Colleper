@@ -1,0 +1,74 @@
+.jumbotron{
+	text-align: center;
+}
+h1{
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-weight: normal;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 24px;
+	line-height: 36px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+
+}
+
+#over1{
+
+text-align: center;
+text-decoration: underline;
+}
+
+#img1{
+	height: 150px;
+	width: 150px;
+	margin-left: 12px;
+
+}
+
+#img2{
+	height: 150px;
+	width: 150px;
+	margin-left: 12px;
+}
+
+#over2{
+	
+	
+}
+
+#img3{
+	height: 200px;
+	width: 150px;
+	 border: 10px solid transparent;
+}
+
+#img4{
+	height: 200px;
+	width: 150px;
+}
+
+#img5{
+	height: 200px;
+	width: 150px;
+}
+div.gallery {
+    margin: 15px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 250px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}

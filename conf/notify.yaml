@@ -6,8 +6,7 @@
 # 2. modify the default value to the provider that you want
 
 email:
-  # default can take values 'smtp', 'sparkPost' or 'mandrill' or 'hasura'
-  default: hasura
+  default: smtp
   providers:
     hasura:
       authToken:
@@ -20,7 +19,7 @@ email:
           key: notify.mandrill.key
           name: hasura-secrets
     smtp:
-      hostname: ""
+      hostname: "smtp.gmail.com"
       password:
         secretKeyRef:
           key: notify.smtp.password
