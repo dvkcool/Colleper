@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "events"("eventname" text NOT NULL, "eventdate" text NOT NULL,
+      "id" serial NOT NULL, PRIMARY KEY ("id") )
+  type: run_sql
+- args:
+    name: events
+  type: add_existing_table_or_view

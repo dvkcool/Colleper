@@ -62,6 +62,7 @@ app.post('/eventadd', function(req, res){
       }
     })
   }
+  console.log("Request - body"+req);
   request(selectOptions, function(error, response, body) {
     if (error) {
         console.log('Error from select request: ');
