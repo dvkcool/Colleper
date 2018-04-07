@@ -19,12 +19,12 @@ email:
           key: notify.mandrill.key
           name: hasura-secrets
     smtp:
-      hostname: "smtp.gmail.com"
+      hostname: "smtp.rediffmail.com"
       password:
         secretKeyRef:
           key: notify.smtp.password
           name: hasura-secrets
-      port: 465
+      port: 25
       username:
         secretKeyRef:
           key: notify.smtp.username
