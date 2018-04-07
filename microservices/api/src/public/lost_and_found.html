@@ -1,117 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="lost_and_found.css">
+	<link rel="stylesheet" type="text/css" href="css/lost_and_found.css">
+	<script
+	src="jquery/jquery-3.3.1.min.js"></script>
+	<script src="jquery/menu.js"></script>
+
 	<title>lost and found</title>
 </head>
 <body>
+	<div class="container-fluid">
 
-<!--
-<div id="over1">
-	
-<h1> </h1>	
-
-</div> -->
-
-<div class="container">
-
-<div class="jumbotron">
-    <h1>Lost and found</h1>
-    </div>
-	<div class="row">
-		<div class="col-md-2" id="over2">
-        <br>
-			<img src="report_found.png" id="img1">
-			<img src="report_lost.png" id="img2">
+		<div class="jumbotron">
+		    <h1>Lost and found</h1>
 		</div>
-		<div class="col-md-9 col-md-offset-1" id="over2">
-			<br>
+		<div class="row">
+				<div class="col-md-2" id="over2"><br>
+				<a href="#"><img src="image/report_found.png" id="img1"></a>
+				<a href="#"><img src="image/report_lost.png" id="img2"></a>
+		</div>
+		<div class="col-md-9 col-md-offset-1" id="over2"><br>
 			<div class="row">
-
-				<!--<div class="col-md-3">
-					<img src="bike1.jpg" id="img3">
+				<div class="gallery">
+					<img src="image/bike1.jpg" alt="Fjords" width="500" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
 				</div>
-				<div class="col-md-3">
-					<img src="bike2.jpg" id="img4">
+				<div class="gallery">
+					<img src="image/bike2.jpg" alt="Fjords" width="300" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
 				</div>
-				<div class="col-md-3">
-					<img src="cycle1.jpg" id="img5">
+				<div class="gallery">
+					<img src="image/cycle1.jpg" alt="Fjords" width="300" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
 				</div>
 			</div>
-			<div class="row"></div>
-			<div class="row"></div>
-		</div>-->
-<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="bike1.jpg" alt="Fjords" width="500" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
+			<div class="row">
+				<div class="gallery">
+					<img src="image/bike1.jpg" alt="Fjords" width="300" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
+				</div>
+				<div class="gallery">
+					<img src="image/bike1.jpg" alt="Fjords" width="300" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
+				</div>
+				<div class="gallery">
+					<img src="image/cycle2.jpg" alt="Fjords" width="300" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="gallery">
+					<img src="image/car1.jpg" alt="Fjords" width="300" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
+				</div>
+				<div class="gallery">
+					<img src="image/car2.jpg" alt="Fjords" width="300" height="200">
+					<div class="desc">Add a description of the image here
+						<a href="#" class="button" id="headerButton">CLAIM</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="bike2.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="cycle1.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
+		<div id="bg">
+		</div>
+		<div id="main">
+			<img src="image/menu.png" id="icon" />
+			<div id="menu">
+				<ul>
+					<li>HOME</li>
+					<li>NOTES</li>
+					<li>LOST & FOUND</li>
+					<li>LEND/GET VEHICLE</li>
+					<li>TECHNOSHOP</li>
+				</ul>
+			</div>
+		</div>
 	</div>
-	<div class="row">
-	<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="bike1.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-	<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="bike1.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-	<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="cycle2.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-</div>
-<div class="row">
-<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="car1.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="fjords.jpg">
-    <img src="car2.jpg" alt="Fjords" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-</div>
-</div>
-
-</div>
-
-
 </body>
 </html>
