@@ -5,6 +5,7 @@ var router = express.Router();
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var exphbs  = require('express-handlebars');
+var alertnode = require('alert-node');
 require('request-debug')(request);
 
 /*var hasuraExamplesRouter = require('./hasuraExamples');
@@ -81,9 +82,8 @@ app.post('/eventadd', function(req, res){
         });
     }
     console.log("response: "+ response);
-    res.status(200).json({
-      'message': 'Select request done'
-    });
+    alertnode('Thank you, your event has been added');
+    res.redirect("/index.html");
   })
 });
 app.listen(8080, function () {
