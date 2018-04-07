@@ -125,10 +125,3 @@ title | text NOT NULL
 content | text NOT NULL
 rating | numeric NOT NULL
 author_id | integer NOT NULL
-
-
-### Filestore APIs
-
-Sometimes, you would want to upload some files to the cloud. This can range from a profile pic for your user or images for things listed on your app. You can securely add, remove, manage, update files such as pictures, videos, documents using Hasura filestore.
-
-You can try out these in the `API EXPLORER` tab of the `api console`. To learn more, check out our [docs](https://docs.hasura.io/0.15/manual/users/index.html)
