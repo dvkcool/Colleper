@@ -1,5 +1,5 @@
 
-# hello-nodejs-express 
+# hello-nodejs-express
 
 [<img src="https://res.cloudinary.com/hasura/image/upload/v1519823410/button1.png">](https://hasura.io/hub/projects/hasura/hello-nodejs-express)
 
@@ -126,32 +126,6 @@ content | text NOT NULL
 rating | numeric NOT NULL
 author_id | integer NOT NULL
 
-Alternatively, you can also view the schema for these tables on the api console by heading over to the tab named `data` as shown in the screenshots below.
-
-![alt text][data1]
-![alt text][data2]
-
-This means that you can now leverage the Hasura data queries to perform CRUD operations on these tables.
-
-For eg, to fetch a list of all articles from the article table, you have to send the following JSON request to the data api endpoint -> `https://data.cluster-name.hasura-app.io/v1/query` (replace `cluster-name` with your cluster name)
-
-```json
-{
-    "type": "select",
-    "args": {
-        "table": "article",
-        "columns": [
-            "id",
-            "title",
-            "content",
-            "rating",
-            "author_id"
-        ]
-    }
-}
-```
-
-To learn more about the data apis, head over to our [docs](https://docs.hasura.io/0.15/manual/data/index.html)
 
 ### Filestore APIs
 
