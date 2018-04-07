@@ -1,0 +1,57 @@
+#over1{
+
+text-align: center;
+text-decoration: underline;
+}
+
+#img1{
+	height: 300px;
+	width: 300px;
+
+}
+
+#img2{
+	height: 300px;
+	width: 300px;
+}
+
+#over2{
+	background-color: #dedef8;
+	box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+}
+
+#img3{
+	height: 200px;
+	width: 150px;
+	 border: 10px solid transparent;
+}
+
+#img4{
+	height: 200px;
+	width: 150px;
+}
+
+#img5{
+	height: 200px;
+	width: 150px;
+}
+div.gallery {
+    margin: 15px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
