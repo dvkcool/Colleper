@@ -40,6 +40,40 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static(__dirname + '/public'));
+app.post('/eventadd', function(req, res){
+  var selectOptions = {
+    url: "https://data.controversial68.hasura-app.io/v1/query",
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Hasura-User-Id': '3',
+      'X-Hasura-Role': 'user'
+    },
+    body: JSON.stringify({
+      "type": "insert",
+      "args": {
+          "table": "events",
+          "objects": [
+              {
+                  "eventname": req.eventname,
+                  "eventdate": req.eventdate
+              }
+          ]
+      }
+    })
+  }
+  request(selectOptions, function(error, response, body) {
+    if (error) {
+        console.log('Error from select request: ');
+        console.log(error)
+        res.status(500).json({
+          'error': error,
+          'message': 'Select request failed'
+        });
+    }
+    console.log("response: "+ response);
+  })
+});
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
