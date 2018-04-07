@@ -6,8 +6,8 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var exphbs  = require('express-handlebars');
 var alertnode = require('alert-node');
+const vision = require('@google-cloud/vision');
 require('request-debug')(request);
-
 /*var hasuraExamplesRouter = require('./hasuraExamples');
 
 var server = require('http').Server(app);
@@ -51,6 +51,21 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(express.static(__dirname + '/public'));
+app.get('/picture', function(req,res){
+  const client = new vision.ImageAnnotatorClient();
+
+  client
+  .labelDetection('https://filestore.alias14.hasura-app.io/v1/file/361d8829-93a3-4e9b-9c2b-eb537d0a1640')
+  .then(results => {
+    const labels = results[0].labelAnnotations;
+
+    console.log('Labels:');
+    labels.forEach(label => console.log(label.description));
+  })
+  .catch(err => {
+    console.error('ERROR:', err);
+  });
+});
 app.post('/eventadd', function(req, res){
   var selectOptions = {
     url: "https://data.alias14.hasura-app.io/v1/query",

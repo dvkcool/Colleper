@@ -8,6 +8,7 @@
   "author": "Jaison",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/vision": "^0.19.0",
     "alert-node": "^1.1.2",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
