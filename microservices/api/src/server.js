@@ -42,7 +42,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/public'));
 app.post('/eventadd', function(req, res){
   var selectOptions = {
-    url: "https://data.controversial68.hasura-app.io/v1/query",
+    url: "https://data.alias14.hasura-app.io/v1/query",
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
