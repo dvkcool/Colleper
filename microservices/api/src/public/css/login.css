@@ -25,24 +25,24 @@ body{
   z-index: 99;
 }
 
-#studentform,#adminform{
+#loginform,#signupform{
   position: absolute;
   top: 50%;
   left: 70%;
   z-index: 999;
   transform: translate(-50%,-50%);
 }
-#adminform{
+#signupform{
   top: 45%;
     left: 75%;
     visibility: hidden;
 }
-#studentform h1,#adminform h1{
+#loginform h1,#signupform h1{
   font-family: arial;
   font-size: 25px;
   color: turquoise;
 }
-#studentform input,#adminform input{
+#loginform input,#signupform input{
   height: 40px;
   width:300px;
   border: 0px;
@@ -50,7 +50,7 @@ body{
   border-bottom: 1px solid black;
   margin: 5px;
 }
-#studentform button,#adminform button{
+#loginform button,#signupform button{
   height: 35px;
   width: 130px;
   background-color: turquoise;
@@ -64,7 +64,7 @@ body{
     margin-left: 175px;
 }
 
-#student_btn,#admin_btn{
+#login_btn,#signup_btn{
   height: 35px;
   width: 120px;
   background-color: transparent;
@@ -78,16 +78,16 @@ body{
   transform: translate(-50%,-50%);
   transition: all .5s;
 }
-#admin_btn{
+#signup_btn{
   left: 25%;
 }
-#student_btn:hover,#admin_btn:hover{
+#login_btn:hover,#signup_btn:hover{
     background-color: white;
     color: #2d2d2d;
     cursor: pointer;
 }
 
-#student_msg,#admin_msg{
+#login_msg,#signup_msg{
   font-family: arial;
   font-size: 25px;
   color: white;
@@ -98,6 +98,6 @@ body{
   transform: translate(-50%,-50%);
 
 }
-#admin_msg{
+#signup_msg{
   left: 25%;
 }

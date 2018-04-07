@@ -117,11 +117,13 @@ margin-left: 5px;
   visibility: hidden;
 }
 
+
 .content{
   float: left;
   width: 75%;
   overflow: hidden;
 }
+
 .leftSidebar{
   float: right;
   width: 25%;
@@ -138,6 +140,7 @@ margin-left: 5px;
   font-family: 'Jua',sans-serif;
   font-weight: 100;
 }
+
 
 
 #ecran{
@@ -250,3 +253,4 @@ aside{
     .wrapper{
       opacity: 1;
     }
+

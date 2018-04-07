@@ -127,13 +127,10 @@ div.gallery {
     border: 1px solid #ccc;
     float: left;
     width: 250px;
-<<<<<<< HEAD
+
 		height: 350px;	
 		position: relative;
 
-=======
-		position: relative;
->>>>>>> 785c7a4f630d9957de0a8c81013952dd17c3d7c9
 }
 
 div.gallery:hover {

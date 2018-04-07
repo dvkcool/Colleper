@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+
+  <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Add event</a>
+
+    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+      <form method="post" action="/action_page_post.php">
+        <div>
+          <h3>Login information</h3>
+          <label for="event name" class="ui-hidden-accessible">Event name:</label>
+          <input type="text" name="ev name" id="evn" placeholder="Event name">
+          <label for="event date" class="ui-hidden-accessible">Event date:</label>
+          <input type="date" name="ev date" id="pswd" placeholder="Event date">
+
+          <input type="submit" data-inline="true" value="Log in" method = "post" action = "api.controversial68.hasura-app.io/eventadd">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
