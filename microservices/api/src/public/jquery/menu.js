@@ -4,7 +4,7 @@ $(document).ready(function(){
     $("#icon").fadeOut();
     $("#menu ul").delay(300).animate({opacity:'1'});
     $("#menu ul").css("visibility","visible");
-    $("#bg").delay(200).animate({opacity:"1"});
+    $("#bg").delay(200).animate({opacity:".4"});
     $("#bg").css("visibility","visible");
   });
   $("#bg").click(function(){
