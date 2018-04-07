@@ -7,39 +7,42 @@
     <script
     src="jquery/jquery-3.3.1.min.js"></script>
     <script src="jquery/menu.js"></script>
-    <script src="jquery/slideshow.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   </head>
   <body>
     <header>
-      <img src="" alt="icon" id="mainIcon" />
-      <h1 id="logo">SAHYOG</h1>
+      <img src="image/colleper.png" alt="icon" id="mainIcon" />
+      <h1 id="logo">COLLEPER = COLLEGE+KEEPER</h1>
       <a href="#" class="button" id="headerButton">LOGIN</a>
     </header>
     <div class="index">
       <hr>
-<div>
-     <img class="mySlides" src="tn.jpg">
-<img class="mySlides" src="bike1.jpg">
-<img class="mySlides" src="cycle1.jpg">
-<img class="mySlides" src="bike2.jpg">
 
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        <div class="content">
+          <div class="w3-content w3-section" >
+  <img class="mySlides w3-animate-fading" src="image/lost&found.jpeg" >
 
+ 					 <img class="mySlides w3-animate-fading" src="image/notes.jpg" >
+  <img class="mySlides w3-animate-fading" src="image/vehicle.jpg" >
+  <img class="mySlides w3-animate-fading" src="image/technoshop.jpg">
 </div>
+
+
+        </div>
         <aside class="leftSidebar">
           <h3>UPCOMING EVENTS</h3>
           <hr />
-          <ul class="events">
-            <li>utkarshan</li>
-            <li>eclectika</li>
-            <li>mock placement</li>
-            <li>kalposia</li>
-          </ul>
+          <div id="ecran" >
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            utkarshan <br><br>
+            eclecktika<br><br>
+            aavartan<br><br>
+            mock placement<br><br>
+
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          </div>
+
         </aside>
       <div id="bg">
       </div>
@@ -56,5 +59,36 @@
         </div>
       </div>
     </div>
+  <script type='text/javascript'>
+  function ScrollDiv(){
+
+   if(document.getElementById('ecran').scrollTop<(document.getElementById('ecran').scrollHeight-document.getElementById('ecran').offsetHeight)){-1
+         document.getElementById('ecran').scrollTop=document.getElementById('ecran').scrollTop+1
+         }
+   else {document.getElementById('ecran').scrollTop=0;}
+}
+
+setInterval(ScrollDiv,50)
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
+
+  
   </body>
+
 </html>
