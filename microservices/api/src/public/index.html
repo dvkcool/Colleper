@@ -1,56 +1,104 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>HOME</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script
-    src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="jquery/menu.js"></script>
 
-  </head>
-  <body>
-    <header>
-      <img src="" alt="icon" id="mainIcon" />
-      <h1 id="logo">SAHYOG</h1>
-      <a href="#" class="button" id="headerButton">LOGIN</a>
-    </header>
-    <script>
-    var a = localStorage.getItem('user');
-    document.write(a);
-</script>
-    <div class="index">
-      <hr>
+<head>
+	<meta charset="utf-8">
+	<title>HOME</title>
+	<link rel="stylesheet" href="css/index.css">
+	<style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Do+Hyeon|Jua|Lobster|East+Sea+Dokdo');
+</style>
+	<script
+	src="jquery/jquery-3.3.1.min.js"></script>
+	<script src="jquery/menu.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-        <div class="content">
-          <div id="images">
-            images
-          </div>
-        </div>
-        <aside class="leftSidebar">
-          <h3>UPCOMING EVENTS</h3>
-          <hr />
-          <ul class="events">
-            <li>utkarshan</li>
-            <li>eclectika</li>
-            <li>mock placement</li>
-            <li>kalposia</li>
-          </ul>
-        </aside>
-      <div id="bg">
-      </div>
-      <div id="main">
-        <img src="image/menu.png" id="icon" />
-        <div id="menu">
-          <ul>
-            <li>HOME</li>
-            <li>NOTES</li>
-            <li>LOST & FOUND</li>
-            <li>LEND/GET VEHICLE</li>
-            <li>TECHNOSHOP</li>
-          </ul>
-        </div>
-      </div>
+</head>
+<body>
+	<header>
+		<img src="image/colleper.png" alt="icon" id="mainIcon" />
+		<h1 id="logo">COLLEPER = COLLEGE+KEEPER</h1>
+	</header>
+	<div class="index">
+    <div class="hr">
+
     </div>
-  </body>
+		<div class="content">
+			<div class="w3-content w3-section" >
+				<a href="notes.html"> <img class="mySlides w3-animate-fading" src="image/notes.jpg" ></a>
+				<a href=""><img class="mySlides w3-animate-fading" src="image/vehicle.jpg" ></a>
+				<a href=""><img class="mySlides w3-animate-fading" src="image/technoshop.jpg"></a>
+				<a href=""><img class="mySlides w3-animate-fading" src="image/lost&found.jpeg" ></a>
+			</div>
+
+
+		</div>
+		<aside class="leftSidebar">
+			<h3>UPCOMING EVENTS</h3>
+      <div class="hr">
+      </div>
+      <div id="ecran" >
+				<br/><br/><br/><br/>
+				utkarshan <br>
+				eclecktika<br>
+				aavartan<br>
+				mock placement<br><br>
+
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			</div>
+      <button id="button2">
+        ADD EVENT
+      </button>
+      <button id="button1">
+        LOGIN
+      </button>
+
+		</aside>
+		<div id="bg">
+		</div>
+		<div id="main">
+			<img src="image/menu.png" id="icon" />
+			<div id="menu">
+				<ul>
+					<li>HOME</li>
+					<li>NOTES</li>
+					<li>LOST & FOUND</li>
+					<li>LEND/GET VEHICLE</li>
+					<li>TECHNOSHOP</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'>
+		function ScrollDiv(){
+
+			if(document.getElementById('ecran').scrollTop<(document.getElementById('ecran').scrollHeight-document.getElementById('ecran').offsetHeight)){-1
+				document.getElementById('ecran').scrollTop=document.getElementById('ecran').scrollTop+1
+			}
+			else {document.getElementById('ecran').scrollTop=0;}
+		}
+
+		setInterval(ScrollDiv,50)
+	</script>
+
+	<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}
+				x[myIndex-1].style.display = "block";
+			setTimeout(carousel, 9000);
+		}
+	</script>
+
+
+</body>
+
 </html>
