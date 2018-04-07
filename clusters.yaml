@@ -1,7 +1,6 @@
+clusters:
 - alias: hasura
-  config:
-    configmap: controller-conf
-    namespace: controversial68-hasura
   data: null
-  kubeContext: controversial68
-  name: controversial68
+  infra:
+    provider: hasura-free
+version: v1
