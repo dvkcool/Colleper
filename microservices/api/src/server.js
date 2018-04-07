@@ -35,6 +35,16 @@ app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
 */
+app.engine('handlebars', exphbs({
+	defaultLayout: 'main',
+	helpers: {
+	    toJSON : function(object) {
+	      return JSON.stringify(object, null, 4);
+	    }
+  	}
+	})
+);
+app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -45,9 +55,7 @@ app.post('/eventadd', function(req, res){
     url: "https://data.alias14.hasura-app.io/v1/query",
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'X-Hasura-User-Id': '3',
-      'X-Hasura-Role': 'user'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       "type": "insert",
