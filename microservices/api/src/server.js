@@ -110,7 +110,18 @@ app.post('/itemupload', function(req, res){
   },
   body: file
 }
-
+const client = new vision.ImageAnnotatorClient();
+tags="";
+client
+.labelDetection('https://filestore.alias14.hasura-app.io/v1/file/'+file_id)
+.then(results => {
+  labels = results[0].labelAnnotations;
+  labels.forEach((label) =>{
+    tags=tags+label.description});
+})
+.catch(err => {
+  console.error('ERROR:', err);
+});
 fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
 .then(function(response) {
   resp = response.json();
@@ -128,6 +139,7 @@ fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
           "objects": [
               {
                   "file_id": file_id,
+                  "tags": tags
               }
           ]
       }
