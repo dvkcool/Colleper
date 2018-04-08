@@ -9,7 +9,7 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/lost_and_found.css">
+	<link rel="stylesheet" type="text/css" href="css/lostandfound.css">
 	<script
 	src="jquery/jquery-3.3.1.min.js"></script>
 	<script src="jquery/menu.js"></script>
@@ -131,16 +131,18 @@
 </div>
 <script>
 function up(){
-	alert('function is running');
+
   file = document.getElementById("myfile");
 
   var requestOptions = {
 	method: 'POST',
-
+headers: {
+	"Authorization": "Bearer 9d1ada1ce32615f9b919f81f74c8c9b659956de2c502d6ef"
+}
 	body: file
 }
 
-fetch("https://api.alias14.hasura-app.io/itemupload", requestOptions)
+fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
 .then(function(response) {
 	return response.json();
 })

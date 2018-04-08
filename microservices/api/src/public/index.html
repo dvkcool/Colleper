@@ -34,7 +34,7 @@
 				<a href="notes.html"> <img class="mySlides w3-animate-fading" src="image/notes.jpg" ></a>
 				<a href="vehicles.html"><img class="mySlides w3-animate-fading" src="image/vehicle.jpg" ></a>
 				<a href="technoshop.html"><img class="mySlides w3-animate-fading" src="image/technoshop.jpg"></a>
-				<a href="lost_and_found.html"><img class="mySlides w3-animate-fading" src="image/lost&found.jpeg" ></a>
+				<a href="lostandfound.html"><img class="mySlides w3-animate-fading" src="image/lost&found.jpeg" ></a>
 			</div>
 
 
@@ -74,7 +74,7 @@
 <!--      <button id="button2">
 
 </button> -->
-      <button id="button1" onclick="./login.html">
+<button id="button1">
         LOGIN
       </button>
 
@@ -95,6 +95,14 @@
 		</div>
 	</div>
 	<script type='text/javascript'>
+	//console.log(localStorage.getItem('role'));
+	if(localStorage.getItem('role') == "user" ){
+		document.getElementById('button2').style.visibility = 'hidden';
+	}
+	document.getElementById("button1").addEventListener("click", function(){
+	    window.location = "login.html"
+	});
+
 		function ScrollDiv(){
 
 			if(document.getElementById('ecran').scrollTop<(document.getElementById('ecran').scrollHeight-document.getElementById('ecran').offsetHeight)){-1
