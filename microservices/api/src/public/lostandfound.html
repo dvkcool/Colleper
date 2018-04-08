@@ -138,11 +138,13 @@ function up(){
 
   var requestOptions = {
 	method: 'POST',
-
+	headers: {
+      "Authorization": "Bearer 9d1ada1ce32615f9b919f81f74c8c9b659956de2c502d6ef"
+	},
 	body: file
 }
 
-fetch("https://api.alias14.hasura-app.io/itemupload", requestOptions)
+fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
 .then(function(response) {
 	return response.json();
 })
@@ -153,7 +155,6 @@ fetch("https://api.alias14.hasura-app.io/itemupload", requestOptions)
 	console.log('Request Failed:' + error);
 });
 }
-up();
 </script>
 </body>
 </html>
