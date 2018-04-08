@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>SignUp Form</title>
     <link rel="stylesheet" href="css/login.css">
+
     <script
     src="jquery/jquery-3.3.1.min.js"></script>
     <script src="jquery/login.js"></script>
@@ -12,21 +13,19 @@
   <body>
     <div id="box">
       <div id="main"></div>
-      <div id="studentform">
-        <form>
-        <h1>STUDENT LOGIN</h1>
-        <input type="hidden" id="occ" value="student" />
-        <input type="email" placeholder="Email" id ="email"/ ><br>
-        <input type="password" placeholder="Password" id="pass" / ><br>
-        <button >LOGIN</button>
-      </form>
+      <div id="loginform">
+        <h1>LOGIN</h1>
+
+        <input type="email" placeholder="Email" id="em" ><br>
+        <input type="password" placeholder="Password" id="pass"><br>
+        <button onclick="fettch()" >LOGIN</button>
       </div>
-      <div id="adminform">
-        <h1>ADMIN LOGIN</h1>
-        <input type="hidden" id="occ" value="admin" />
-        <input type="email" placeholder="Email" id="email" / ><br>
-        <input type="password" placeholder="Password" id="pass" / ><br>
-        <button >LOGIN</button>
+      <div id="signupform">
+        <h1>SIGN UP</h1>
+        <input type="text" placeholder="Name" / ><br>
+        <input type="email" placeholder="Email" / ><br>
+        <input type="password" placeholder="Password" / ><br>
+        <button >SIGN UP</button>
       </div>
 
       <div id="login_msg">Have an account?</div>
