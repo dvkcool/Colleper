@@ -5,25 +5,57 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css/lost_and_found.css">
 	<script
 	src="jquery/jquery-3.3.1.min.js"></script>
 	<script src="jquery/menu.js"></script>
-
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Anton|Do+Hyeon|Jua|Lobster|East+Sea+Dokdo||Yeon+Sung');
+	</style>
 	<title>lost and found</title>
 </head>
 <body>
+	<div data-role="page">
 	<div class="container-fluid">
+		<header>
+			<h1 id="logo">LOST AND FOUND</h1>
+		</header>
+		<div class="hr">
+    </div>
 
-		<div class="jumbotron">
-		    <h1>Lost and found</h1>
-		</div>
 		<div class="row">
+
 				<div class="col-md-2" id="over2"><br>
-				<a href="#"><img src="image/report_found.png" id="img1"></a>
+					<div data-role="main" class="ui-content">
+				    <a href="#myPopup" data-rel="popup" ><img src="image/report_found.png" id="img1"></a>
+
+						    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+						<form method="post">
+						        <div>
+						         <h3>Add details</h3>
+						          <label for="Foundwhere" class="ui-hidden-accessible">Found Where:</label>
+						          <input type="text" name="fnd" id="fndwhere" placeholder="found where">
+						          <label for="FoundWhen" class="ui-hidden-accessible">Found When:</label>
+						          <input type="text" name="fndwhen" id="fndwhen" placeholder="Found when">
+						          <label for="" class="ui-hidden-accessible">Contact number</label>
+						          <input name="myfile" type="file" id="myfile">
+						          <input type="submit"  value="Submit" onclick="up()" >
+
+
+						        </div>
+						</form>
+						    </div>
+						  </div>
+
+				<br><br><br>
 				<a href="#"><img src="image/report_lost.png" id="img2"></a>
-		</div>
+				</div>
+
+
 		<div class="col-md-9 col-md-offset-1" id="over2"><br>
 			<div class="row">
 				<div class="gallery">
@@ -96,5 +128,30 @@
 			</div>
 		</div>
 	</div>
+</div>
+<script>
+function up(){
+	alert('function is running');
+  file = document.getElementById("myfile");
+
+  var requestOptions = {
+	method: 'POST',
+
+	body: file
+}
+
+fetch("https://api.alias14.hasura-app.io/itemupload", requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
+	console.log(result);
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
+}
+up();
+</script>
 </body>
 </html>

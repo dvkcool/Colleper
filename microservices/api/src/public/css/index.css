@@ -83,7 +83,13 @@ header img,h1{
   color: white;
   font-size: 27px;
   padding: 10px;
-
+}
+#menu ul li a{
+  text-decoration: none;
+  font-family: fantasy;
+  color: white;
+  font-size: 27px;
+font-weight: lighter;
 }
 #menu ul li:hover{
   cursor: pointer;
@@ -136,7 +142,7 @@ margin-left: 5px;
 }
 
 .leftSidebar h3{
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Jua',sans-serif;
   font-weight: 100;
 }
@@ -193,6 +199,7 @@ aside{
 
       #button1,#button2{
         color: #673ab7;
+        background-color: #6495ed;
         font-family: fantasy;
         font-size: 20px;
         width: 300px;
@@ -215,9 +222,12 @@ aside{
       }
       #button2{
         position: absolute;
-        top: 90%;
+        top:95%;
         left:50%;
 
+      }
+       a{
+        text-decoration: none;
       }
       #button1::after{
       content: '';
@@ -253,4 +263,3 @@ aside{
     .wrapper{
       opacity: 1;
     }
-
