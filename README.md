@@ -63,4 +63,4 @@ Feel free to open an issue here or mail me at divyanshukumarg@gmail.com
 ## Know the developers
 1. Chetana Sahu -Front-end(HTML,CSS, JS, jQuery) chetanasahu1997@gmail.com
 2. Vaibhav Gupta -Front-end(HTML,CSS, JS, jQuery) && Integration with Backend(Fetch API)- vaibnakgupta100@gmail.com
-3. Divyanshu Kumar - Backend- Node JS, Postgress SQL, 
+3. Divyanshu Kumar - Backend- Node JS, Postgress SQL, - divyanshukumarg@gmail.com
