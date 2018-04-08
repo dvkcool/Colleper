@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" encod>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+
+  <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Add event</a>
+
+    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+      <form method="post" action="">
+        <div>
+          <h3>Lost Item</h3>
+          <label for="item lost" class="ui-hidden-accessible">Item name:</label>
+          <input type="text" name="it name" id="itn" placeholder="Item name">
+          <label for="item color" class="ui-hidden-accessible">Item color:</label>
+          <input type="text" name="it col" id="itcol" placeholder="Item color">
+
+          <input type="submit" value="Add">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

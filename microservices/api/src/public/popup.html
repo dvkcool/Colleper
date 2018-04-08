@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" encod>
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -15,21 +15,52 @@
     <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Add event</a>
 
     <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
-      <form method="post" action="/action_page_post.php">
+<form method="post" action="https://api.alias14.hasura-app.io/eventadd">
         <div>
-          <h3>Login information</h3>
-          <label for="event name" class="ui-hidden-accessible">Event name:</label>
-          <input type="text" name="ev name" id="evn" placeholder="Event name">
-          <label for="event date" class="ui-hidden-accessible">Event date:</label>
-          <input type="date" name="ev date" id="pswd" placeholder="Event date">
+         <h3>L</h3>
+          <label for="Foundwhere" class="ui-hidden-accessible">Found Where:</label>
+          <input type="text" name="fnd" id="fndwhere" placeholder="found where">
+          <label for="FoundWhen" class="ui-hidden-accessible">Found When:</label>
+          <input type="text" name="fndwhen" id="fndwhen" placeholder="Found when">
+          <label for="" class="ui-hidden-accessible">Contact number</label>
+          <input type="number" name="contactno" id="contactnum" placeholder="Contact Number">
+          <input type="submit"  value="Submit" >
 
-          <input type="submit" data-inline="true" value="Log in" method = "post" action = "api.controversial68.hasura-app.io/eventadd">
+
         </div>
-      </form>
+</form>
     </div>
   </div>
 
 </div>
+<!--
+<script>
 
+ function sub(){
+   alert('function called');
+var a = document.getElementById('eventname').value;
+var b = document.getElementById('eventdate').value;
+console.log("a: "+ a+" b:"+b);
+   fetch("https://api.alias14.hasura-app.io/elementadd",{
+     method: 'POST',
+     headers: {
+       Accept: 'application/json',
+       'Content-Type': 'application/json',
+     },
+     body: JSON.stringify({
+       "eventname":""+a,
+       "eventdate": ""+b
+   })
+   }
+
+   )
+   .then((res)=>{
+     console.log(res);
+   })
+
+
+ }
+
+</script>-->
 </body>
 </html>
