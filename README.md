@@ -1,43 +1,22 @@
 
-# hello-nodejs-express
+# Colleper = College + Keeper
+This is a simple web application to help the juniors and seniors with college related issues, mainly four specific issues:
+1. to help the juniors with notes and study mater
+2. to integrate lost and found section with help of Google Vision API,
+3. To build a platform to exchange vehicles.
+4. Technoshop: A platform to provide small earning by letting the CSE/IT students help the non technical kids.
 
-[<img src="https://res.cloudinary.com/hasura/image/upload/v1519823410/button1.png">](https://hasura.io/hub/projects/hasura/hello-nodejs-express)
-
-[**Express.js**](http://expressjs.com) is a Fast, unopinionated, minimalist web framework for node.
-
-## What does this come with?
-
-* Express.js Hello World
-* Deployed with node server
-* **Dockerfile** (automatically used by Hasura for deployment)
-
-```
-FROM node:8
-
-WORKDIR /src
-
-ADD src/package.json /src/
-#install node modules
-RUN npm install
-
-# Add app source files
-ADD src /src
-
-CMD ["node", "server.js"]
-```
 
 ## Deployment instructions
 
 ### Basic deployment:
 
-* Press the **Clone & Deploy** button and follow the instructions.
-* The `hasura quickstart` command clones the project repository to your local computer, and also creates a **free Hasura cluster**, where the project will be hosted for free.
-* A git remote (called hasura) is created and initialized with your project directory.
-* Run `git add .`, `git commit`, and `git push hasura master`.
-* Run the below command to open your deployed express.js app.
-``` shell
-$ hasura microservice open api
+```sh
+$ git clone https://github.com/dvkcool/Colleper.git
+$ git push hasura master
 ```
+For the second command We are assuming that you are familiar with using Hasura as a backend service.
+
 
 ### Making changes and deploying
 
@@ -78,50 +57,10 @@ If changes have been done to the dependencies, `git commit`, and perform `git pu
 
 Hasura comes with BaaS APIs to make it easy to add backend features to your apps.
 
-### Add instant authentication via Hasura’s web UI kit
+## Found a bug?
+Feel free to open an issue here or mail me at divyanshukumarg@gmail.com
 
-Every project comes with an Authentication kit, you can restrict the access to your app to specific user roles.
-It comes with a UI for Signup and Login pages out of the box, which takes care of user registration and signing in.
-
-![Auth UI](https://docs.hasura.io/0.15/_images/uikit-dark.png)
-
-Follow the [Authorization docs](https://docs.hasura.io/0.15/manual/users/uikit.html) to add Authentication kit to your app.
-
-### Add a custom API
-
-Hasura project is composed of a set of microservices. These include certain Hasura microservices like postgres, nginx, data API, auth API and more but can also include your own microservices.
-
-* Check out docs on adding another microservice [Adding Microservice](https://docs.hasura.io/0.15/manual/custom-microservices/index.html)
-
-### Hasura API console
-
-Every Hasura cluster comes with an api console that gives you a GUI to test out the BaaS features of Hasura. To open the api console
-
-```sh
-$ hasura api-console
-```
-
-
-### Add data APIs
-
-Hasura comes with set of Data APIs to access the Postgres database which comes bundled with every Hasura cluster.
-Detailed docs of data APIs can be found [here](https://docs.hasura.io/0.15/manual/data/index.html).
-
-This quickstart app comes with two pre-created tables `author` and `article`.
-
-**author**
-
-column | type
---- | ---
-id | integer NOT NULL *primary key*
-name | text NOT NULL
-
-**article**
-
-column | type
---- | ---
-id | serial NOT NULL *primary key*
-title | text NOT NULL
-content | text NOT NULL
-rating | numeric NOT NULL
-author_id | integer NOT NULL
+## Know the developers
+1. Chetana Sahu -Front-end(HTML,CSS, JS, jQuery) chetanasahu1997@gmail.com
+2. Vaibhav Gupta -Front-end(HTML,CSS, JS, jQuery) && Integration with Backend(Fetch API)- vaibnakgupta100@gmail.com
+3. Divyanshu Kumar - Backend- Node JS, Postgress SQL, 
