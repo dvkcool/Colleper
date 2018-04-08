@@ -1,8 +1,10 @@
 FROM node:8
 
 WORKDIR /src
-ADD ./gmailsignin-f6c00b9c7788.json /src/
+
 ADD src/package.json /src/
+
+ADD src/gmailsignin-f6c00b9c7788.json /src/
 
 #install node modules
 RUN npm install
