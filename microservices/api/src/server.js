@@ -53,8 +53,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static(__dirname + '/public'));
 app.get('/picture', function(req,res){
-  const client = new vision.ImageAnnotatorClient();
-
+  const client = new vision.ImageAnnotatorClient({
+  projectId: 'gmailsignin-1522408964161',
+  keyFilename: './gmailsignin-f6c00b9c7788.json',
+  });
   client
   .labelDetection('https://filestore.alias14.hasura-app.io/v1/file/361d8829-93a3-4e9b-9c2b-eb537d0a1640')
   .then(results => {
