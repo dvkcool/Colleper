@@ -1,0 +1,27 @@
+<html>
+<script>
+function up(){
+  file = document.getElementById("myfile");
+  var requestOptions = {
+	method: 'POST',
+	headers: {
+      "Authorization": "Bearer 9d1ada1ce32615f9b919f81f74c8c9b659956de2c502d6ef"
+	},
+	body: file
+}
+
+fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
+	console.log(result);
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
+}
+</script>
+<input name="myFile" type="file" id="myfile">
+<button type="submit" onclick="up()">
+</html>

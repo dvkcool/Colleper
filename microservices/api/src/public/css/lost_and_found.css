@@ -68,6 +68,14 @@ position: absolute;
 margin-top: 18px;
 margin-left: 5px;
 }
+#menu ul li a{
+  text-decoration: none;
+  font-family: fantasy;
+  color: white;
+  font-size: 27px;
+font-weight: lighter;
+}
+
 #bg{
   height:100vh;
   width: 100%;
@@ -91,12 +99,21 @@ header{
   margin-top: 1%;
   border-radius: 10px;
 
+
 }
 header h1{
   float: left;
 
+
 }
 
+.hr{
+  height: 2px;
+  background-color: #c0c0c0;
+  width: 98%;
+  margin: auto;
+  margin-top: 1%;
+}
 
 #logo{
 	margin-left: 34%;

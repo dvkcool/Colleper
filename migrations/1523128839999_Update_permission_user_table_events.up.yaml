@@ -1,0 +1,14 @@
+- args:
+    role: user
+    table: events
+  type: drop_select_permission
+- args:
+    permission:
+      columns:
+      - eventname
+      - eventdate
+      - id
+      filter: {}
+    role: user
+    table: events
+  type: create_select_permission

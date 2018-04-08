@@ -106,6 +106,16 @@ position: absolute;
 margin-top: 18px;
 margin-left: 5px;
 }
+
+#menu ul li a{
+  text-decoration: none;
+  font-family: fantasy;
+  color: white;
+  font-size: 27px;
+font-weight: lighter;
+}
+
+
 #bg{
   height:100vh;
   width: 100%;
