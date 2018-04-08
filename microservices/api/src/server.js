@@ -37,6 +37,52 @@ app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
 */
+
+function sendmailt(mail){
+  alertnode("Function called");
+  var selectOptions = {
+    url: "https://data.alias14.hasura-app.io/v1/query",
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+    "type": "select",
+    "args": {
+        "table": "techtickets",
+        "columns": [
+            "ticketid"
+        ]
+    }
+})
+  }
+  request(selectOptions, function(error, response, body) {
+    if (error) {
+        console.log('Error from select request: ');
+        console.log(error);
+    }
+    console.log("response: " + response);
+    request("https://notify.alias14.hasura-app.io/v1/send/email",{
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+    "to": mail,
+    "from": "admin@colleper.com",
+    "fromName": "Admin Colleper",
+    "sub": "Ticket generation",
+    "text": "Your ticket is succeffully generated and your ticked id is",
+    "html": "<p>This is the <b>email content</b> in html format</p>"
+    })
+    }
+
+    )
+    console.log("Success");
+
+  })
+}
 app.engine('handlebars', exphbs({
 	defaultLayout: 'main',
 	helpers: {
@@ -104,27 +150,28 @@ app.post('/eventadd', function(req, res){
     res.redirect("/index.html");
   })
 });
-app.post('/tcksubmit', function(req, res){
+app.post('/tcsubmit', function(req, res){
   var selectOptions = {
     url: "https://data.alias14.hasura-app.io/v1/query",
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      "type": "insert",
-      "args": {
-          "table": "techtickets",
-          "objects": [
-              {
-                  "title": req.body.title,
-                  "descr": req.body.descr,
-                  "email": req.body.mail,
-                  "mobile": req.body.mobile
-              }
-          ]
-      }
-    })
+    "type": "insert",
+    "args": {
+        "table": "techtickets",
+        "objects": [
+          {
+          "title":req.body.title,
+          "descr":req.body.descr,
+          "email":req.body.email,
+          "mobile":req.body.mobile
+          }
+        ]
+    }
+})
   }
   console.log("Request - body"+req);
   request(selectOptions, function(error, response, body) {
@@ -137,65 +184,9 @@ app.post('/tcksubmit', function(req, res){
         });
     }
     console.log("response: "+ response);
-
-    var selec = {
-      url: "https://data.alias14.hasura-app.io/v1/query",
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-          "type": "select",
-          "args": {
-              "table": "techtickets",
-              "columns": [
-                  "ticketid"
-              ]
-          }
-      })
-    }
-    request(selec, function(er, rp, by) {
-      if (er) {
-          console.log('Error from select request: ');
-          console.log(er)
-          res.status(500).json({
-            'error': er,
-            'message': 'Select request failed'
-          });
-      }
-      console.log("response: "+ rp);
-      var selectOpt = {
-        url: "https://notify.alias14.hasura-app.io/v1/send/email",
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          "to": req.body.mail,
-          "from": "admin@colleper.in",
-          "fromName": "Colleper Admin",
-          "sub": "Regarding support ticket on Colleper",
-          "text": "This mail is to confirm that you have succesfully applied for a support ticket with ticket id:"+rp.id[0],
-          "html": "<p>This mail is to confirm that you have succesfully applied for a support ticket with ticket id:</p>"
-      })
-    };
-      request(selectOpt, function(er, rpr, by) {
-        if (error) {
-            console.log('Error from select request: ');
-            console.log(er)
-            res.status(500).json({
-              'error': er,
-              'message': 'Select request failed'
-            });
-        }
-        console.log("response: "+ rpr);
-        alertnode('Thank you, your ticket has been generated, a copy has been mailed to you too! :)');
-
-        res.redirect("/index.html");
-      })
-    })
-
-
+    alertnode('Thank you, your ticket is submitted you will recieve a mail shortly :)');
+    sendmailt(req.body.email);
+    res.redirect("/index.html");
   })
 });
 app.listen(8080, function () {
