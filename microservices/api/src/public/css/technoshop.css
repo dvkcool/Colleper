@@ -1,0 +1,239 @@
+#main{
+  height: 50px;
+  width: 50px;
+  background-color: #69b4f8;
+  border-radius: 50%;
+  position: fixed;
+  top: 95%;
+  left: 3%;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+}
+#main:hover{
+  cursor: pointer;
+}
+#icon{
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#menu{
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 12%;
+  left: 58%;
+  transform: translate(-50%,-50%);
+}
+#menu ul{
+  height: 300px;
+  width: 220px;
+  text-align: center;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  opacity: 0;
+  visibility: hidden;
+
+}
+#menu ul li{
+  font-family: fantasy;
+  color: white;
+  font-size: 27px;
+  padding: 10px;
+
+}
+#menu ul li:hover{
+  cursor: pointer;
+}
+
+#menu ul li:hover::before{
+content: '';
+width: 15px;
+height:4px;
+background-color: white;
+position: absolute;
+margin-top: 18px;
+margin-left: -20px;
+}
+#menu ul li:hover::after{
+content: '';
+width: 15px;
+height:4px;
+background-color: white;
+position: absolute;
+margin-top: 18px;
+margin-left: 5px;
+}
+#bg{
+  height:100vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #f0ffff;
+}
+#mainHeader{
+  background-color: #7fffd4;
+  overflow: hidden;
+  height: 150px;;
+  width: 98%;
+  margin: auto;
+  margin-top: 1%;
+  border-radius: 10px;
+
+}
+#mainHeader h1{
+  float: left;
+
+}
+
+
+#logo{
+	margin-left: 31%;
+  margin-top: 2%;
+  font-size:60px;
+  font-family: 'Abril Fatface' , cursive;
+
+}
+
+.hr{
+  height: 2px;
+  background-color: #c0c0c0;
+  width: 98%;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.leftSidebar{
+  overflow: hidden;
+  margin-top: 0%;
+  width: 15%;
+  height: 1000px;
+  float: left;
+  border-right: 2px solid  #c0c0c0;
+}
+
+::-webkit-scrollbar{
+      width: 15px;
+}
+::-webkit-scrollbar-thumb{
+      background: #673ab7;
+      outline: 0;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+.button{
+  width: 150px;
+  height: 70px;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  margin-top: 10%;
+}
+#submit{
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-top: 15px;
+  background-color: #3b0261;
+  font-family: fantasy;
+  font-size: 32px;
+  color: #04c5d6;
+  text-align: center;
+  height: 70px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow:0 15px 30px rgba(59, 2, 97, 0.4);
+  transition: all .5s;
+
+}
+#support{
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  height: 10%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-top: 15px;
+  background-color: #3b0261;
+  font-family: fantasy;
+  font-size: 32px;
+  color: #04c5d6;
+  text-align: center;
+  height: 120px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow:0 15px 30px rgba(59, 2, 97, 0.4);
+  transition: all .5s;
+}
+
+.contents{
+  float: left;
+  margin-left: 5%;
+
+}
+.contents ul{
+  list-style: none;
+}
+.ticket{
+  margin-left: 10%;
+   box-shadow: 15px 5px 35px rgba(0,0,0,0.4);
+   border-radius: 10px;
+  width:700px;
+  margin-top: 5%;
+  height: 250px;
+  overflow: hidden;
+}
+.ticket header{
+    overflow: hidden;
+}
+.ticket h4{
+  padding-top: 10px;
+  padding-left: 40px;
+  margin-top:0px;
+  font-size: 35px;
+  float: left;
+
+}
+.ticketID{
+  margin-top: 3%;
+  margin-right:40px;
+float: right;
+}
+.content ul li{
+  margin-left: 0px;
+  text-decoration: none;
+}
+.desc{
+  font-size: 25px;
+  font-weight: lighter;
+  padding-left: 40px;
+  width: 450px;
+  height: 500px;
+  float: left;
+  font-family: 'Poor Story', cursive;
+}
+.solve{
+  margin-right:  40px;
+  background-color: #7fffd4;
+  height:40px;
+  width: 90px;
+  float: right;
+  border-radius: 5px;
+   box-shadow: 10px 0 30px rgba(0,0,0,0.4);
+}
+
+.solve:hover{
+  cursor: pointer;
+}
