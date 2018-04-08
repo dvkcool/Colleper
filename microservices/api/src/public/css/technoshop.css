@@ -1,9 +1,3 @@
-body{
-  margin: 0px;
-  padding: 0px;
-  background-color: #f0ffff;
-}
-
 #main{
   height: 50px;
   width: 50px;
@@ -74,14 +68,6 @@ position: absolute;
 margin-top: 18px;
 margin-left: 5px;
 }
-#menu ul li a{
-  text-decoration: none;
-  font-family: fantasy;
-  color: white;
-  font-size: 27px;
-font-weight: lighter;
-}
-
 #bg{
   height:100vh;
   width: 100%;
@@ -91,28 +77,31 @@ font-weight: lighter;
   opacity: 0;
   visibility: hidden;
 }
-
-header{
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #f0ffff;
+}
+#mainHeader{
   background-color: #7fffd4;
   overflow: hidden;
   height: 150px;;
-  width: 100%;
+  width: 98%;
   margin: auto;
   margin-top: 1%;
   border-radius: 10px;
 
 }
-header h1{
+#mainHeader h1{
   float: left;
 
 }
 
 
-
 #logo{
-	margin-left: 27%;
-  margin-top: 3%;
-  font-size:50px;
+	margin-left: 31%;
+  margin-top: 2%;
+  font-size:60px;
   font-family: 'Abril Fatface' , cursive;
 
 }
@@ -125,96 +114,15 @@ header h1{
   margin-top: 1%;
 }
 
-
-.col-md-2{
-	border-right: 2px solid #c0c0c0;
-	height: 1300px;
-}
-#over1{
-
-text-align: center;
-text-decoration: underline;
+.leftSidebar{
+  overflow: hidden;
+  margin-top: 0%;
+  width: 15%;
+  height: 1000px;
+  float: left;
+  border-right: 2px solid  #c0c0c0;
 }
 
-#img1{
-	height: 150px;
-	width: 150px;
-	margin-left: 12px;
-
-}
-
-#img2{
-	height: 150px;
-	width: 150px;
-	margin-left: 12px;
-}
-
-#over2{
-
-
-}
-
-#img3{
-	height: 200px;
-	width: 150px;
-	 border: 10px solid transparent;
-}
-
-#img4{
-	height: 200px;
-	width: 150px;
-}
-
-#img5{
-	height: 200px;
-	width: 150px;
-}
-div.gallery {
-    margin: 3%;
-    border: 1px solid #ccc;
-    float: left;
-    width: 250px;
-		height: 350px;
-		position: relative;
-		border-radius: 10px;
-		box-shadow: 10px 0 30px rgba(0,0,0,0.4);
-
-}
-
-
-div.gallery img {
-    width: 100%;
-    height: 220px;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-.button{
-  float: right;
-  text-decoration: none;
-  color: #fff;
-  background-color: /*#68efad*/#00ffff	;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 10px 60px;
-  font-size:15px;
-  font-family:arial;
-  border-radius: 60px;
-  box-shadow: 2px 7px 0px 0px /*#6495ed*/#4169e1;
-  transition: all .2s;
-}
-.button:active{
-  bottom: -1%;
-  box-shadow: 0px 0px 0px 0px #4169e1/*#6495ed*/;
-}
-.button:hover{
-	text-decoration: none;
-}
 ::-webkit-scrollbar{
       width: 15px;
 }
@@ -224,17 +132,17 @@ div.desc {
       border-radius: 50px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
-#lend{
+.button{
   width: 150px;
   height: 70px;
-  position: absolute;
-  top: 7%;
-  left: 50%;
-  perspective: 800px;
   transform: translate(-50%,-50%);
   cursor: pointer;
+  margin-top: 10%;
 }
-#box{
+#submit{
+  position: absolute;
+  top: 50%;
+  left: 60%;
   width: 100%;
   height: 100%;
   display: block;
@@ -248,27 +156,84 @@ div.desc {
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow:0 15px 30px rgba(59, 2, 97, 0.4);
   transition: all .5s;
-}
 
-/*#boxBottom{
-  width: 150px;
-  height: 50px;
-  background-color: #3b0261;
+}
+#support{
   position: absolute;
-  top: 71%;
-  left: 0%;
-  transform: rotateX(-75deg);
+  top: 100%;
+  left: 60%;
+  height: 10%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-top: 15px;
+  background-color: #3b0261;
+  font-family: fantasy;
+  font-size: 32px;
+  color: #04c5d6;
+  text-align: center;
+  height: 120px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow:0 15px 30px rgba(59, 2, 97, 0.4);
   transition: all .5s;
 }
-#main:hover #box{
-  color:#52dee7;
-  background-color: #4a0472;
-  transform: rotateX(25deg);
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow:0 25px 30px rgba(59, 2, 97, 0.4);
+
+.contents{
+  float: left;
+  margin-left: 5%;
 
 }
-#main:hover #boxBottom{
-  transform: rotateX(-60deg);
+.contents ul{
+  list-style: none;
 }
-*/
+.ticket{
+  margin-left: 10%;
+   box-shadow: 15px 5px 35px rgba(0,0,0,0.4);
+   border-radius: 10px;
+  width:700px;
+  margin-top: 5%;
+  height: 250px;
+  overflow: hidden;
+}
+.ticket header{
+    overflow: hidden;
+}
+.ticket h4{
+  padding-top: 10px;
+  padding-left: 40px;
+  margin-top:0px;
+  font-size: 35px;
+  float: left;
+
+}
+.ticketID{
+  margin-top: 3%;
+  margin-right:40px;
+float: right;
+}
+.content ul li{
+  margin-left: 0px;
+  text-decoration: none;
+}
+.desc{
+  font-size: 25px;
+  font-weight: lighter;
+  padding-left: 40px;
+  width: 450px;
+  height: 500px;
+  float: left;
+  font-family: 'Poor Story', cursive;
+}
+.solve{
+  margin-right:  40px;
+  background-color: #7fffd4;
+  height:40px;
+  width: 90px;
+  float: right;
+  border-radius: 5px;
+   box-shadow: 10px 0 30px rgba(0,0,0,0.4);
+}
+
+.solve:hover{
+  cursor: pointer;
+}
