@@ -8,6 +8,7 @@ var exphbs  = require('express-handlebars');
 var alertnode = require('alert-node');
 const vision = require('@google-cloud/vision');
 require('request-debug')(request);
+var fetch =  require('fetch');
 /*var hasuraExamplesRouter = require('./hasuraExamples');
 
 var server = require('http').Server(app);
