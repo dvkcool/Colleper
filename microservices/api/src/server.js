@@ -111,7 +111,7 @@ app.post('/itemupload', function(req, res){
     body: JSON.stringify({
       "type": "insert",
       "args": {
-          "table": "events",
+          "table": "filetb",
           "objects": [
               {
                   "eventname": req.body.when,
