@@ -3,7 +3,7 @@ function fettch(){
 
   var a = document.getElementById('em').value;
   var b = document.getElementById('pass').value;
-  fetch("https://auth.controversial68.hasura-app.io/v1/login",{
+  fetch("https://auth.alias14.hasura-app.io/v1/login",{
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -29,7 +29,7 @@ function fettch(){
     }
     else{
 	var name = resp.username;
-  localStorage.setItem('user', name);
+        alert("roles: "+ resp.hasura_roles[0]);
   window.location="index.html";
 }
  })

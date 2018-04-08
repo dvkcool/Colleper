@@ -104,69 +104,6 @@ app.post('/eventadd', function(req, res){
     res.redirect("/index.html");
   })
 });
-app.post('/itemupload', function(req, res){
-  file = req.body;
-  var requestOptions = {
-  method: 'POST',
-  headers: {
-      "Authorization": "Bearer 9d1ada1ce32615f9b919f81f74c8c9b659956de2c502d6ef"
-  },
-  body: file
-}
-fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
-.then(function(response) {
-  resp = response.json();
-  file_id  = resp.file_id;
-  const client = new vision.ImageAnnotatorClient();
-  tags="";
-  client
-  .labelDetection('https://filestore.alias14.hasura-app.io/v1/file/'+file_id)
-  .then(results => {
-    labels = results[0].labelAnnotations;
-    labels.forEach((label) =>{
-      tags=tags+label.description});
-  })
-  .catch(err => {
-    console.error('ERROR:', err);
-  });
-  var selectOpt = {
-    url: "https://data.alias14.hasura-app.io/v1/query",
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      "type": "insert",
-      "args": {
-          "table": "filetb",
-          "objects": [
-              {
-                  "file_id": file_id,
-                  "tags": tags
-              }
-          ]
-      }
-    })
-  }
-  console.log("Request - body"+req);
-  request(selectOpt, function(erro, respons, bod) {
-    if (erro) {
-        console.log(erro)
-        res.status(500).json({
-          'error': error,
-          'message': 'Select request failed'
-        });
-    }
-  })
-  return respons.json();
-})
-.then(function(result) {
-  console.log(result);
-})
-.catch(function(error) {
-  console.log('Request Failed:' + error);
-});
-});
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
