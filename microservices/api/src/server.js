@@ -110,22 +110,22 @@ app.post('/itemupload', function(req, res){
   },
   body: file
 }
-const client = new vision.ImageAnnotatorClient();
-tags="";
-client
-.labelDetection('https://filestore.alias14.hasura-app.io/v1/file/'+file_id)
-.then(results => {
-  labels = results[0].labelAnnotations;
-  labels.forEach((label) =>{
-    tags=tags+label.description});
-})
-.catch(err => {
-  console.error('ERROR:', err);
-});
 fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
 .then(function(response) {
   resp = response.json();
   file_id  = resp.file_id;
+  const client = new vision.ImageAnnotatorClient();
+  tags="";
+  client
+  .labelDetection('https://filestore.alias14.hasura-app.io/v1/file/'+file_id)
+  .then(results => {
+    labels = results[0].labelAnnotations;
+    labels.forEach((label) =>{
+      tags=tags+label.description});
+  })
+  .catch(err => {
+    console.error('ERROR:', err);
+  });
   var selectOpt = {
     url: "https://data.alias14.hasura-app.io/v1/query",
     method: 'POST',
