@@ -1,0 +1,10 @@
+- args:
+    permission:
+      columns:
+      - id
+      - field
+      - tags
+      filter: {}
+    role: anonymous
+    table: lostnfound
+  type: create_select_permission

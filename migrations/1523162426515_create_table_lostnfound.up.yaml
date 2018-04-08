@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "lostnfound"("id" serial NOT NULL, "field" text NOT NULL, "tags"
+      text NOT NULL, PRIMARY KEY ("id") )
+  type: run_sql
+- args:
+    name: lostnfound
+  type: add_existing_table_or_view

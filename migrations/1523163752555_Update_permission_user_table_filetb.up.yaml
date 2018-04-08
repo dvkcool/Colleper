@@ -1,0 +1,10 @@
+- args:
+    permission:
+      columns:
+      - fileid
+      - id
+      - tags
+      filter: {}
+    role: user
+    table: filetb
+  type: create_select_permission

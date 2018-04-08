@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "techtickets"("ticketid" serial NOT NULL, "title" text NOT NULL,
+      "describe" text , "email" text NOT NULL, "mobile" integer NOT NULL, PRIMARY
+      KEY ("ticketid") )
+  type: run_sql
+- args:
+    name: techtickets
+  type: add_existing_table_or_view

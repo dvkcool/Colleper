@@ -1,0 +1,60 @@
+<html>
+<script>
+
+function putm(){
+
+  var a = document.getElementById('title').value +"";
+  var b = document.getElementById('descr').value +"";
+  var c = document.getElementById('mail').value +"";
+  var d = document.getElementById('mobile').value +"";
+  console.log("a: "+a +" b: "+b+" c:"+c+" d:" + d);
+  fetch("https://data.alias14.hasura-app.io/v1/query",{
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+    "type": "insert",
+    "args": {
+        "table": "techtickets",
+        "objects": [
+          {
+          "title":a,
+          "descr":b,
+          "email":c,
+          "mobile":d
+
+          }
+        ]
+    }
+})})
+  .then((res) => res.json())
+  .then((resp) => {
+
+    if(resp.code=="invalid-creds"){
+      alert("Invalid login");
+    }
+    else{
+	var name = resp.username;
+        alert("roles: "+ resp.hasura_roles[0]);
+  window.location="index.html";
+}
+ })
+
+  }
+</script>
+<body>
+<form action="/tcksubmit" method="post">
+  <label> Enter title of your ticket</label>
+  <input type="text" id="title">
+  <label> Enter short description of your ticket</label>
+  <input type="text" id="descr">
+  <label> Enter  your mail id</label>
+  <input type="text" id="mail">
+  <label> Enter  your mobile number</label>
+  <input type="text" id="mobile">
+  <input type="submit" value="Submit" onclick="putm()">
+</form>
+</body>
+</html>

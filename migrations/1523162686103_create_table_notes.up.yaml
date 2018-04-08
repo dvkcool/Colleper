@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "notes"("id" serial NOT NULL, "branch" text NOT NULL, "subject"
+      text NOT NULL, "semester" text NOT NULL, "descr" text NOT NULL, PRIMARY KEY
+      ("id") )
+  type: run_sql
+- args:
+    name: notes
+  type: add_existing_table_or_view

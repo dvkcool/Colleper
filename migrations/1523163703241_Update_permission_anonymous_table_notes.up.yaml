@@ -1,0 +1,12 @@
+- args:
+    permission:
+      columns:
+      - semester
+      - subject
+      - branch
+      - descr
+      - id
+      filter: {}
+    role: anonymous
+    table: notes
+  type: create_select_permission

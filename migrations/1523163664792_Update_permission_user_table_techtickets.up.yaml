@@ -1,0 +1,12 @@
+- args:
+    permission:
+      columns:
+      - mobile
+      - email
+      - ticketid
+      - descr
+      - title
+      filter: {}
+    role: user
+    table: techtickets
+  type: create_select_permission
