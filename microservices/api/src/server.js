@@ -102,6 +102,19 @@ app.post('/eventadd', function(req, res){
   })
 });
 app.post('/itemupload', function(req, res){
+  file = req.body;
+  var requestOptions = {
+  method: 'POST',
+  headers: {
+      "Authorization": "Bearer 9d1ada1ce32615f9b919f81f74c8c9b659956de2c502d6ef"
+  },
+  body: file
+}
+
+fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
+.then(function(response) {
+  resp = response.json();
+  file_id  = resp.file_id;
   var selectOpt = {
     url: "https://data.alias14.hasura-app.io/v1/query",
     method: 'POST',
@@ -114,8 +127,7 @@ app.post('/itemupload', function(req, res){
           "table": "filetb",
           "objects": [
               {
-                  "eventname": req.body.when,
-                  "eventdate": req.body.where
+                  "file_id": file_id,
               }
           ]
       }
@@ -131,20 +143,7 @@ app.post('/itemupload', function(req, res){
           'message': 'Select request failed'
         });
     }
-    console.log("response: "+ response);
-    alertnode('Thank you for reporting the lost item.');
   })
-  file = req.body.file;
-  var requestOptions = {
-  method: 'POST',
-  headers: {
-      "Authorization": "Bearer 9d1ada1ce32615f9b919f81f74c8c9b659956de2c502d6ef"
-  },
-  body: file
-}
-
-fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
-.then(function(response) {
   return response.json();
 })
 .then(function(result) {
