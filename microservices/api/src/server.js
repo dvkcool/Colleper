@@ -146,17 +146,16 @@ fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
     })
   }
   console.log("Request - body"+req);
-  request(selectOpt, function(error, response, body) {
-    if (error) {
-        console.log('Error from select request: ');
-        console.log(error)
+  request(selectOpt, function(erro, respons, bod) {
+    if (erro) {
+        console.log(erro)
         res.status(500).json({
           'error': error,
           'message': 'Select request failed'
         });
     }
   })
-  return response.json();
+  return respons.json();
 })
 .then(function(result) {
   console.log(result);
