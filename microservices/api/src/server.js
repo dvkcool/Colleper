@@ -101,6 +101,59 @@ app.post('/eventadd', function(req, res){
     res.redirect("/index.html");
   })
 });
+app.post('/itemupload', function(req, res){
+  var selectOpt = {
+    url: "https://data.alias14.hasura-app.io/v1/query",
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "type": "insert",
+      "args": {
+          "table": "events",
+          "objects": [
+              {
+                  "eventname": req.body.when,
+                  "eventdate": req.body.where
+              }
+          ]
+      }
+    })
+  }
+  console.log("Request - body"+req);
+  request(selectOpt, function(error, response, body) {
+    if (error) {
+        console.log('Error from select request: ');
+        console.log(error)
+        res.status(500).json({
+          'error': error,
+          'message': 'Select request failed'
+        });
+    }
+    console.log("response: "+ response);
+    alertnode('Thank you for reporting the lost item.');
+  })
+  file = req.body.file;
+  var requestOptions = {
+  method: 'POST',
+  headers: {
+      "Authorization": "Bearer 9d1ada1ce32615f9b919f81f74c8c9b659956de2c502d6ef"
+  },
+  body: file
+}
+
+fetch("https://filestore.alias14.hasura-app.io/v1/file", requestOptions)
+.then(function(response) {
+  return response.json();
+})
+.then(function(result) {
+  console.log(result);
+})
+.catch(function(error) {
+  console.log('Request Failed:' + error);
+});
+});
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
